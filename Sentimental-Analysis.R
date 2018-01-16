@@ -32,11 +32,12 @@ iPhone <- read.csv(paste0(path,"/Task 3/1-Large Matrixes/iPhoneLargeMatrix.csv")
 }
 
 # Overview ----
-length(iPhone) # 16
+length(iPhone) 
+      # 16
 str(iPhone)
-# nrows: 5426   
-# dependent variable: $iphoneSentiment
-# attr types: int
+      # nrows: 5426   
+      # dependent variable: $iphoneSentiment
+      # attr types: int
 summary(iPhone)
 # $iphoneSentiment: 16 NA's
 # id           iphone         iphonecampos      iphonecamneg       iphonecamunc      iphonedispos    
@@ -63,6 +64,8 @@ summary(iPhone)
 # 3rd Qu.: 0.0000   3rd Qu.: 0.0000   3rd Qu.: 0.000   3rd Qu.:   0.000  
 # Max.   :26.0000   Max.   :32.0000   Max.   :42.000   Max.   : 352.000  
 # NA's   :16  
+
+histogram(iPhone$iphoneSentiment)
 
 # Save clean subset----
 #write.csv(iPhone, paste0(path,"/Task 3/1-Large Matrixes/iPhoneonly.csv"))
